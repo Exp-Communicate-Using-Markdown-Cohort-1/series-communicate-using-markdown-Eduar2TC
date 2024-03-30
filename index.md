@@ -37,8 +37,8 @@ class ScoreCard extends StatelessWidget {
 
 ```
 
-- [x] item 1
-- [x] item 2
+- [ ] item 1
+- [ ] item 2
 - [ ] item 3
-- [x] item 4
+- [ ] item 4
       
