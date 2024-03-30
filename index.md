@@ -8,11 +8,37 @@
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ```
-$ git init
-Initialized empty Git repository in /Users/skills/Projects/recipe-repository/.git/
+import 'package:flutter/material.dart';
+
+class ScoreCard extends StatelessWidget {
+  const ScoreCard({
+    super.key,
+    required this.score,
+  });
+
+  final ValueNotifier<int> score;
+
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder<int>(
+      valueListenable: score,
+      builder: (context, score, _) {
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(12, 6, 12, 18),
+          child: Text(
+            'Score: $score'.toUpperCase(),
+            style: Theme.of(context).textTheme.titleLarge!,
+          ),
+        );
+      },
+    );
+  }
+}
+
 ```
 
-- [x] List syntax is required
-- [x] This item is complete
-- [ ] This item is not complete
+- [x] item 1
+- [x] item 2
+- [ ] item 3
+- [x] item 4
       
